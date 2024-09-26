@@ -1,0 +1,111 @@
+#one{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+}
+#two{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+}
+#three{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+}
+#clear{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+}
+#four{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+}
+#five{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+}
+#six{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+}
+#divide{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+}
+#seven{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+}
+#eight{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+}
+#nine{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+}
+#add{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+}
+#sub{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+}
+#zero{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+}
+#mul{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+}
+#equal{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+}
+#keypad{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    width: 30%;
+    padding-left: 10px;
+}
+#display{
+    border-radius: 7px;
+    width: 220px;
+    padding: 15px;
+    border-color: rgba(0, 0, 0, 0.541);
+    border-style:solid;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    border-style:solid;
+    width: fit-content;
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+    border-color: rgba(0, 0, 0, 0.476);
+}
+#title{
+    margin: 0px;
+    margin-left: 25px;
+    font-size: 30px;
+}

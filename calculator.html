@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+    <title>Calculator</title>
+</head>
+<body>
+    
+    <div id="container">
+        <p id="title">CALCULATOR</p>
+        <div id="display">0</div>
+        <div id="keypad">
+            <button id="one" onclick="one()">1</button>
+            <button id="two" onclick="two()">2</button>
+            <button id="three" onclick="three()">3</button>
+            <button id="clear" onclick="del()">c</button>
+        
+            <button id="four" onclick="four()">4</button>
+            <button id="five" onclick="five()">5</button>
+            <button id="six" onclick="six()">6</button>
+            <button id="divide" onclick="div()">/</button>
+    
+            <button id="seven" onclick="seven()">7</button>
+            <button id="eight" onclick="eight()">8</button>
+            <button id="nine" onclick="nine()">9</button>
+            <button id="add" onclick="add()">+</button>
+        
+            <button id="sub" onclick="sub()">-</button>
+            <button id="zero" onclick="zero()">0</button>
+            <button id="mul" onclick="mul()">X</button>
+            <button id="equal" onclick="equal()">=</button>
+        </div>
+    </div>
+    
+    
+    
+    
+    <p id="result" ></p>
+    
+</body>
+</html>
+<script>
+    var display = document.getElementById("display")
+    var string = ""
+    function one(){
+        string += 1
+        display.textContent = string
+        console.log(string)
+    }
+    function two(){
+        string += 2
+        display.textContent = string
+        console.log(string)
+    }
+    function three(){
+        string += 3
+        display.textContent = string
+        console.log(string)
+    }
+    function four(){
+        string += 4
+        display.textContent = string
+        console.log(string)
+    }
+    function five(){
+        string += 5
+        display.textContent = string
+        console.log(string)
+    }
+    function six(){
+        string += 6
+        display.textContent = string
+        console.log(string)
+    }
+    function seven(){
+        string += 7
+        display.textContent = string
+        console.log(string)
+    }
+    function eight(){
+        string += 8
+        display.textContent = string
+        console.log(string)
+    }
+    function nine(){
+        string += 9
+        display.textContent = string
+        console.log(string)
+    }
+    function zero(){
+        string += 0
+        display.textContent = string
+        console.log(string)
+    }
+    function add(){
+        string += '+'
+        display.textContent = string
+        console.log(string)
+    }
+    function sub(){
+        string += '-'
+        display.textContent = string
+        console.log(string)
+    }
+    function mul(){
+        string += 'x'
+        display.textContent = string
+        console.log(string)
+    }
+    function div(){
+        string += '%'
+        display.textContent = string
+        console.log(string)
+    }
+    function del(){
+        string = string.slice(0,-1)
+        display.textContent = string
+        console.log(string)
+    }
+    function addition(a,b){
+        return a+b
+    }
+    function subraction(a,b){
+        return a-b
+    }
+    function multiplication(a,b){
+        return a*b
+    }
+    function division(a,b){
+        return a/b
+    }
+    function equal(){
+        let array = []
+        for(let i=0;i<string.length;i++){
+            array.push(string[i])
+        }
+        let num1 = ""
+        let num2 = ""
+        let operator = null
+        for(let j=0;j<array.length;j++){
+            if( array[j]=="+" || array[j]=="-" || array[j]=="x" || array[j]=="%"){
+                operator = array[j]
+            }
+            else if(operator == null){
+                num1 += array[j]
+            }
+            else{
+                num2 += array[j]
+            }
+
+        }
+        let a = Number(num1)
+        let b = Number(num2)
+        let final_answer = 0
+        switch(operator){
+            case "+":
+                final_answer = addition(a,b)
+                break
+            case "-":
+                final_answer = subraction(a,b)
+                break
+            case "x":
+                final_answer = multiplication(a,b)
+                break  
+            case "%":
+                final_answer = division(a,b)
+                break 
+            default:
+                final_answer = "syntax error"
+        }
+        display.textContent = final_answer
+        
+
+    }
+    
+</script>
